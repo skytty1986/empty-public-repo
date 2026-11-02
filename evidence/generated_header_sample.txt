@@ -1,0 +1,128 @@
+这是 2026-11-01 01:01 那次 make 产出的 MMOGameUIClasses.h 中 MMOUIVehicleBook 类的片段。
+用于证明：那次 make 确实成功生成了标准格式的头文件。
+
+    }
+    DECLARE_CLASS(UMMOUIHandbookPanel,UMMOUIBase,0|CLASS_Config,MMOGame)
+    #include "UMMOUIHandbookPanel.h"
+};
+
+struct MMOUIVehicleBook_eventCallUCUpdateMountSoul_Parms
+{
+    class UGFxObject* datArray;
+    MMOUIVehicleBook_eventCallUCUpdateMountSoul_Parms(EEventParm)
+    {
+    }
+};
+struct MMOUIVehicleBook_eventCallUCUpdateMountPowerAttrTotal_Parms
+{
+    class UGFxObject* datArray;
+    MMOUIVehicleBook_eventCallUCUpdateMountPowerAttrTotal_Parms(EEventParm)
+    {
+    }
+};
+struct MMOUIVehicleBook_eventCallUCUpdateMountPowerData_Parms
+{
+    class UGFxObject* dat;
+    MMOUIVehicleBook_eventCallUCUpdateMountPowerData_Parms(EEventParm)
+    {
+    }
+};
+struct MMOUIVehicleBook_eventCallASSetOperatingBtnType_Parms
+{
+    UBOOL isMountBtn;
+    UBOOL isEnabled;
+    MMOUIVehicleBook_eventCallASSetOperatingBtnType_Parms(EEventParm)
+    {
+    }
+};
+struct MMOUIVehicleBook_eventCallASSetMountedVehicle_Parms
+{
+    INT vehicleID;
+    MMOUIVehicleBook_eventCallASSetMountedVehicle_Parms(EEventParm)
+    {
+    }
+};
+struct MMOUIVehicleBook_eventCallASSetInfoShowMode_Parms
+{
+    INT isOnlyOwned;
+    MMOUIVehicleBook_eventCallASSetInfoShowMode_Parms(EEventParm)
+    {
+    }
+};
+struct MMOUIVehicleBook_eventCallASSetCurSelectedVehicle_Parms
+{
+    INT vehicleID;
+    MMOUIVehicleBook_eventCallASSetCurSelectedVehicle_Parms(EEventParm)
+    {
+    }
+};
+struct MMOUIVehicleBook_eventCallASUpdateVehicleList_Parms
+{
+    class UGFxObject* dataProvider;
+    MMOUIVehicleBook_eventCallASUpdateVehicleList_Parms(EEventParm)
+    {
+    }
+};
+struct MMOUIVehicleBook_eventClonePlayerModel_Parms
+{
+    class AMMOPlayer* base;
+    class AMMOPlayer* ReturnValue;
+    MMOUIVehicleBook_eventClonePlayerModel_Parms(EEventParm)
+    {
+    }
+};
+struct MMOUIVehicleBook_eventCallAsSetLocalizationData_Parms
+{
+    class UGFxObject* data;
+    MMOUIVehicleBook_eventCallAsSetLocalizationData_Parms(EEventParm)
+    {
+    }
+};
+class UMMOUIVehicleBook : public UMMOUIBaseSlotContainer
+{
+public:
+    //## BEGIN PROPS MMOUIVehicleBook
+    TArrayNoInit<FString> UI_TITLE_TEXT;
+    FStringNoInit UI_TEXT_VEHICLE;
+    FStringNoInit UI_TEXT_SPEEDUP;
+    FStringNoInit UI_TEXT_VEHICLELIST;
+    FStringNoInit UI_TEXT_CURRENTSELECTEDVEHICLE;
+    FStringNoInit UI_TEXT_NOTOWNVEHICLE;
+    FStringNoInit UI_CHECKBOX_SHOWALL;
+    FStringNoInit UI_CHECKBOX_SHOWOWN;
+    FStringNoInit UI_TEXT_VEHICLEPOWERLEVEL;
+    FStringNoInit UI_TEXT_VEHICLEPOWERTITLE;
+    FStringNoInit UI_TEXT_VEHICLEPOWERTIPS;
+    INT _CurSelectedIdx;
+    INT _CurSelectedID;
+    INT _LastMountPowerSum;
+    INT _nMaxSoulSlot;
+    INT _IsInfoShowHaving;
+    class ULevelStreamingUIShow* _ShowLevel;
+    BITFIELD _RTSet:1;
+    INT _PendingRTCounter;
+    class AMMOPlayer* _ShowModel;
+    BYTE _ModelRotStates;
+    FStringNoInit ShowLevelName;
+    FLOAT ModelStandardHeight;
+    FLOAT ModelStandardRadius;
+    FLOAT _CurModelScale;
+    //## END PROPS MMOUIVehicleBook
+
+    virtual void PostAdvance(FLOAT DeltaTime);
+    virtual void NativeInitOnce();
+    virtual void UpdateVehicleModel(INT vehicleID);
+    virtual void SetCurSelectedVehicle(INT vehicleID);
+    virtual void UpdateVehicleList();
+    virtual void UpdateMountedVehicle();
+    virtual void UpdateMountPower();
+    virtual void BagSlotChange(INT bagId,INT slotId);
+    virtual UBOOL OnLeftMousePress(class UGFxObject* mc,BYTE slotType,BYTE containerID,INT slotID,UBOOL bDefault);
+    virtual UBOOL OnLeftMouseClick(class UGFxObject* mc,BYTE slotType,BYTE containerID,INT slotID,UBOOL bDefault);
+    virtual UBOOL OnRightMouseClick(class UGFxObject* mc,BYTE slotType,BYTE containerID,INT slotID,UBOOL bDefault);
+    virtual UBOOL OnDragDrop(class UGFxObject* srcSlotMC,class UGFxObject* destSlotMC,BYTE srcSlotType,BYTE srcContainerID,INT srcSlotID,BYTE destSlotType,BYTE destContainerID,INT destSlotID);
+    void ASSetCurSelectedVehicle(INT vehicleID);
+    void ASSetInfoShowMode(INT isOnlyOwned);
+    void ASModelRotate(INT dir);
+    void ASReleaseModelRotate();
+    void ASMountVehicle(INT vehicleID);

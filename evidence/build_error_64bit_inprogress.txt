@@ -1,0 +1,19 @@
+CQYH UE3 Editor Win64 Release 编译错误（进行中快照，去重 17 条 / 原始 60 条）
+
+D:\cqyh_build64\Source\08.Prog_CQ_S1\Client\UE3\Development\Src\UnrealEd\Src\EditorFrame.cpp(75): fatal error C1083: 无法打开包括文件: “DataBrowserShared.h”: No such file or directory
+D:\cqyh_build64\Source\08.Prog_CQ_S1\Client\UE3\Development\Src\MMOGame\MMOFacade.cpp(3877): error C2248: “UNPCTemplate::DisplayName”: 无法访问 private 成员(在“UNPCTemplate”类中声明)
+D:\cqyh_build64\Source\08.Prog_CQ_S1\Client\UE3\Development\Src\MMOGame\Src\GlobalMapInfo.cpp(12): fatal error C1083: 无法打开包括文件: “MServerMapCfgExport.h”: No such file or directory
+D:\cqyh_build64\Source\08.Prog_CQ_S1\Client\UE3\Development\Src\MMOGame\AbilityProcessor.cpp(7598): error C2039: "MainThreadCleanupComponent": 不是 "UAudioDevice" 的成员
+D:\cqyh_build64\Source\08.Prog_CQ_S1\Client\UE3\Development\Src\MMOGame\AbilityProcessor.cpp(7599): error C2039: "ResetDelayFrame": 不是 "UAudioDevice" 的成员
+D:\cqyh_build64\Source\08.Prog_CQ_S1\Client\UE3\Development\Src\UnrealEd\Src\UnObjectTools.cpp(4266): error C2086: “void (__cdecl *const `ThumbnailTools::RenderThumbnail'::`2'::BeginCommand::`vftable'[3])(void)”: 重定义
+D:\cqyh_build64\Source\08.Prog_CQ_S1\Client\UE3\Development\Src\UnrealEd\Src\PropertyUtils.cpp(15): fatal error C1083: 无法打开包括文件: “ContentBrowserShared.h”: No such file or directory
+D:\cqyh_build64\Source\08.Prog_CQ_S1\Client\UE3\Development\Src\UnrealEd\Src\InterpEditorMenus.cpp(5616): error C2065: “IDM_INTERP_TRACK_ExportAnimTrackFBX”: 未声明的标识符
+D:\cqyh_build64\Source\08.Prog_CQ_S1\Client\UE3\Development\Src\UnrealEd\Src\TeleportGraph.cpp(1281): fatal error C1083: 无法打开包括文件: “MServerMapCfgExport.h”: No such file or directory
+D:\cqyh_build64\Source\08.Prog_CQ_S1\Client\UE3\Development\Src\UnrealEd\Src\UnStaticMeshEdit.cpp(1313): error C2143: 语法错误: 缺少“;”(在“*”的前面)
+D:\cqyh_build64\Source\08.Prog_CQ_S1\Client\UE3\Development\Src\UnrealEd\Src\UnStaticMeshEdit.cpp(1313): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+D:\cqyh_build64\Source\08.Prog_CQ_S1\Client\UE3\Development\Src\UnrealEd\Src\UnStaticMeshEdit.cpp(1314): error C2059: 语法错误:“{”
+D:\cqyh_build64\Source\08.Prog_CQ_S1\Client\UE3\Development\Src\UnrealEd\Src\UnStaticMeshEdit.cpp(1314): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+D:\cqyh_build64\Source\08.Prog_CQ_S1\Client\UE3\Development\Src\UnrealEd\Src\UnStaticMeshEdit.cpp(1314): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+D:\cqyh_build64\Source\08.Prog_CQ_S1\Client\UE3\Development\Src\UnrealEd\Src\UnStaticMeshEdit.cpp(1383): error C2027: 使用了未定义类型“ExistingStaticMeshData”
+D:\cqyh_build64\Source\08.Prog_CQ_S1\Client\UE3\Development\Src\UnrealEd\Src\UnStaticMeshEdit.cpp(1383): error C2672: “Min”: 未找到匹配的重载函数
+D:\cqyh_build64\Source\08.Prog_CQ_S1\Client\UE3\Development\Src\UnrealEd\Src\UnStaticMeshEdit.cpp(1542): error C2440: “=”: 无法从“int *”转换为“ExistingStaticMeshData *”
